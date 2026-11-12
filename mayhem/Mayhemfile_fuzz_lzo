@@ -1,0 +1,9 @@
+project: savantenvs/Generals-Mac-iOS-iPad
+target: fuzz_lzo
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lzo/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lzo
+    libfuzzer: true
+    timeout: 10
